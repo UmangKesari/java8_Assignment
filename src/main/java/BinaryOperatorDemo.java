@@ -1,8 +1,12 @@
 import java.util.function.BinaryOperator;
 
-public class BinaryOperatorDemo {
-    public static void main(String[] args){
-        BinaryOperator<Integer> binaryOperator = (a,b) -> a+b ;
-        System.out.print(binaryOperator.apply(5,6));
+public class BinaryOperatorDemo
+{
+    BinaryOperator<Integer> binaryOperator;
+    public int getResult0fBinaryOperator(int x, int y)
+    {
+        binaryOperator = (a,b) -> a+b ;
+        return binaryOperator.apply(x,y);
     }
+
 }

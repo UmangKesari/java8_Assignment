@@ -3,7 +3,6 @@ package DateAndTime;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
-
 /*
 class DifferenceAge
 {
@@ -40,19 +39,23 @@ public class ExactAge
         return getPeriod(dob, current).getDays();
     }*/
 
+    public String findAge(int years,int months,int days)
+    {
+        LocalDate today = LocalDate.now();
+        LocalDate birthday = LocalDate.of(years, months, days);
+        Period period = Period.between(birthday,today);
+        return (period.getYears() +"years " + period.getMonths() +"months " + period.getDays() + "days");
+    }
 
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)throws Exception
     {
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Enter dob");
         int years= sc.nextInt();
         int months = sc.nextInt();
         int days = sc.nextInt();
-        LocalDate today = LocalDate.now();
-        LocalDate birthday = LocalDate.of(years, months, days);
+        ExactAge exactAge = new ExactAge();
+        System.out.println(exactAge.findAge(years,months,days));
 
-        Period period = Period.between(birthday,today);
-        System.out.println(period.getYears() +"years " + period.getMonths() +"months " + period.getDays() + "days");
     }
 }

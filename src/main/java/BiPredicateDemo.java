@@ -1,6 +1,8 @@
 import java.util.function.BiPredicate;
 
 public class BiPredicateDemo {
+
+    public
     public static void main(String... args){
         String a ="Ram", b= "Shyam";
 

@@ -18,23 +18,6 @@ public class TerminalOperationsDemo
         Optional<String> max = oprList.stream().max(Comparator.comparingInt(String::length)).orElse(0);
         return max.ifPresent((str) -> str.length()).orElse(0);
     }*/
-    public static void main(String[] args)
-    {
 
-        List<String> list = new ArrayList<String>();
-        list.add("Sunny");
-        list.add("Paras");
-        list.add("Shubham");
-        list.add("Sajal");
-        list.add("Lakshay");
-        list.add("Umang");
-
-        TerminalOperationsDemo terminal = new TerminalOperationsDemo();
-
-        System.out.println(terminal.anymatch(list));
-        System.out.println(terminal.allMatch(list));
-
-
-    }
 
 }

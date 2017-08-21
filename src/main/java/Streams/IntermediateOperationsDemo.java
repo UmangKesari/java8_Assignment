@@ -23,30 +23,16 @@ class Employee {
 }
 public class IntermediateOperationsDemo
 {
-    static List<Employee> list =new ArrayList<>();
-
-    public static void usingFilter(List<Employee> employeeList){
+    public static void usingFilter(List<Employee> employeeList, int age)
+    {
         employeeList.stream()
                 .filter(p -> p.age==23).forEach(System.out::println);
     }
-
 
     public static void usingMap(List<Employee> employeeList)
     {
         employeeList.stream().map(p -> p.email).forEach(System.out::println);
     }
 
-    public static void main(String[] args)
-    {
-
-        list.add(new Employee("Sunny","Agrawal","sunny009@gmail.com",23));
-        list.add(new Employee("Paras","Porwal","parascs@gmail.com",21));
-        list.add(new Employee("Sajal","Gupta","sajal4me@gmail.com",22));
-        list.add(new Employee("Vikram","Tiwana","vikram@gmail.com",23));
-        list.add(new Employee("Umang","Kesari","umang@knoldus.in",23));
-
-        usingFilter(list);
-        usingMap(list);
-    }
 }
 
